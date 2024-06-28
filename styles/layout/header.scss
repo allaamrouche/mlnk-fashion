@@ -1,0 +1,42 @@
+.header__container {
+    display: flex;
+    padding: 1rem 2rem;
+    // position: fixed; 
+	top: 0;
+    left: 0;
+    z-index: z('navigation-overlay');
+    width: 96vw;
+    margin: 0 auto;
+    letter-spacing: 0.1rem;
+    align-items: center;
+    font-family: $font-love-story-self-made;
+    color: $color-cod-gray; 
+    border: none; 
+    text-transform: uppercase;
+    padding-top: 10rem;
+}
+
+.header__logo {
+    flex: 6; 
+    display: flex;
+    align-items: center;
+}
+
+.header__logo a {
+    text-decoration: none;
+    font-size: 4rem;
+    flex-grow: 1; 
+    // cursor: none;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+    flex: 3;
+}
+
+.header__link {
+    text-decoration: none;
+	font-size: 2.8rem;
+}

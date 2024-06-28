@@ -1,0 +1,18 @@
+.element__reveal {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .element__reveal__inner {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transform-origin: center top;
+  }
+  
+  .element__reveal__img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }

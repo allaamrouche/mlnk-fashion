@@ -1,0 +1,12 @@
+.single {
+    @extend %cover;
+}
+
+.single__post--title {
+	@extend %title-bold-48;
+	text-transform: uppercase;
+}
+
+.single__post--content {
+    font-size: 2.4rem;
+}

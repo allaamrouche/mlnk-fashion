@@ -1,0 +1,74 @@
+.favorites {
+	@extend %page;
+  }
+
+.favorites__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.favorites__products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures space between items */
+  max-width: 96vw;
+  margin: 20rem auto;
+  gap: 1rem; /* Maintains a gap between rows and columns */
+}
+
+.favorites__product {
+  flex: 0 0 23%; /* Takes up 23% of the container width, 4 per row */
+  height: 68rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1rem 0; /* Adds vertical margin */
+}
+
+.favorites__media__image {
+ @extend %cover;
+  object-fit: cover;
+}
+
+.favorites__content {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.favorites__content--heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.favorites__content--buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Medium screens (tablets): 3 products per row */
+@media (max-width: 1024px) {
+  .favorites__product {
+      flex: 0 0 31%; /* Takes up about 31% of the container width */
+  }
+}
+
+/* Small screens (large phones): 2 products per row */
+@media (max-width: 768px) {
+  .favorites__product {
+      flex: 0 0 48%; /* Takes up 48% of the container width */
+  }
+}
+
+/* Very small screens (small phones): 1 product per row */
+@media (max-width: 480px) {
+  .favorites__product {
+      flex: 0 0 100%; /* Takes up 100% of the container width */
+  }
+}
+
+

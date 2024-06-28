@@ -1,0 +1,391 @@
+.woocommerce div.product {
+    margin-bottom: 0;
+    position: relative;
+    width: 90vw;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    padding: 0;
+    margin: 2.4rem 4rem 0 4rem;
+}
+
+.woocommerce .woocommerce-result-count {
+    margin: 0 4rem 1rem;
+}
+
+.woocommerce .woocommerce-ordering {
+    margin: 0 5.4rem 0 0;
+}
+
+.woocommerce-message::before {
+   color: $color-bright-gray;
+}
+
+.woocommerce-message {
+    @extend %description-24;
+    background-color: $color-green-spring;
+    border-top: unset;
+    margin: 14rem 4rem;
+}
+
+.product-single--content {
+    display: flex;
+    justify-content: space-between;
+    margin: 10rem 0;
+}
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    float: none;
+    width: auto;
+}
+
+.product-single--gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-single--image.main-image {
+    width: 64rem;
+    height: 68rem;
+    display: block;
+    overflow: hidden;
+}
+
+.product-single--image.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-single--thumbnails {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.8rem;
+}
+
+.product-single--thumbnails .woocommerce-product-gallery__image {
+    flex-basis: 24%;
+    max-width: 25%;
+    height: 18rem;
+}
+
+.product-single--thumbnails .woocommerce-product-gallery__image img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+
+.woocommerce div.product .product_title {
+    @extend %title-64;
+
+    color: $color-bright-gray;
+    text-transform: uppercase;
+    line-height: 1;
+    position: absolute;
+    top: 4rem;
+}
+
+.woocommerce .woocommerce-product-rating .star-rating {
+    float: none;
+}
+
+.woocommerce div.product .woocommerce-product-rating {
+    margin-top: 6.4rem;
+}
+
+.product-single--category,
+.woocommerce-review-link {
+    @extend %title-20;
+
+    color: $color-bright-gray;
+}
+
+.woocommerce-Price-amount.amount{
+    color: $color-cod-gray;
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.product-single--description {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-single--description p {
+    @extend %description-26;
+
+    color: $color-bright-gray;
+    margin-top: 2.4rem;
+    line-height: 1;
+}
+
+.product-single--description-heading {
+    @extend %title-40;
+
+    color: $color-bright-gray;
+    margin-top: 4rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+
+// related products section
+section.related {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+section.related.products h2 {
+    @extend %title-64;
+
+    color: $color-bright-gray;
+    margin-bottom: 6.4rem;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1.4;
+}
+
+section.related.products h2::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid $color-bright-gray;
+    z-index: 1;
+}
+
+.woocommerce ul.products {
+    clear: none;
+    margin: 0 4rem;
+}
+
+.woocommerce ul.products li.product a img {
+    height: 54rem;
+}
+
+/* tabs */
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    overflow: visible;
+    padding: 0;
+    display: flex;
+    flex-direction: column; // Ensure tabs are displayed in a column
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: none; 
+    border: none; 
+    margin-top: 10rem;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    @extend %title-64; 
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-bright-gray;
+    font-weight: normal;
+    line-height: 1.4;
+    padding: 0;
+    background: none; 
+    border: none; // Ensure no borders for links
+    position: relative; // Position relative for the pseudo-element positioning
+    display: block; // Ensure it's a block for correct dimensions
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px; // Height of the underline
+    background-color: $color-bright-gray; // Color of the underline
+    display: block;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs::after {
+    content: none;
+}
+
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background: transparent;
+   
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+    border-bottom: 1px solid $color-bright-gray;
+}
+
+
+.woocommerce .variations_form .variation-row {
+    display: flex;
+    align-items: center;
+    margin: 4rem auto;
+}
+
+.woocommerce div.product form.cart {
+    margin: 0;
+}
+
+.woocommerce div.product form.cart .variations label {
+    @extend %title-40;
+
+    color: $color-bright-gray;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: normal;
+  
+}
+
+.woocommerce .variations_form .variation-row .label {
+    flex-basis: 34%;
+}
+
+.woocommerce .variations_form .variation-row .value {
+    flex-grow: 1;
+}
+
+button.attribute-option {
+    @extend %description-24;
+
+    color: $color-bright-gray;
+    text-transform: uppercase;
+    padding: 1.4rem 4rem;
+}
+
+.woocommerce .woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-enabled {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between; 
+}
+
+
+.woocommerce .quantity .qty {
+    width: auto;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid $color-bright-gray;
+    padding: 1.4rem 4rem;
+}
+	
+.woocommerce div.product form.cart .button {
+    vertical-align: middle;
+    float: none;
+    background-color: transparent;
+    color: $color-bright-gray;
+    border: 1px solid $color-bright-gray;
+    border-radius: unset;
+    line-height: 1;
+    text-transform: uppercase;
+    width: 50%;
+   
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 2.2rem;
+    width: 60%;
+}
+
+.woocommerce ul.products li.product .button {
+    @extend %title-20;
+
+    display: inline-block;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    border-radius: unset;
+    padding: 2rem;
+    color: $color-bright-gray;
+    background-color: transparent;
+    border: 1px solid $color-bright-gray;
+}
+
+.woocommerce #reviews #comments ol.commentlist li {
+    width: 100%;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    padding: 1rem;
+    font-size: 2.8rem;
+    border-radius: unset;
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    height: 10rem;
+    width: 10rem;
+}
+
+.comment-form-rating .stars span {
+    display: flex;
+}
+
+.comment-form-rating .stars a {
+    text-decoration: none;  
+    color: $color-green-spring; 
+    font-size: 2.4rem; 
+    padding: 0.4rem;
+}
+
+.comment-form-rating .stars a:hover {
+    color: $color-green-spring;
+}
+
+#reply-title.comment-reply-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+label[for="rating"],
+label[for="comment"] {
+    @extend %title-20;
+
+    margin: 4rem 0;
+    display: inline-block;
+}
+
+.woocommerce #review_form #respond textarea {
+    background-color: transparent;
+}
+
+.woocommerce #review_form #respond .form-submit input {
+    @extend %title-20;
+
+    color: $color-bright-gray;
+    background-color: transparent;
+    border: 1px solid $color-bright-gray;
+    border-radius: unset;
+}
+
+.woocommerce #review_form #respond .form-submit input:hover,
+.woocommerce ul.products li.product .button:hover {
+    color: $color-satin-linen; 
+    background-color: $color-cod-gray;
+}
+
+.woocommerce #reviews #comment {
+    font-family: $font-satoshi-regular;
+}
+
+.woocommerce #reviews #comments h2 {
+    font-family: $font-satoshi-regular;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 4rem 0;
+    line-height: 1.4;
+}
+

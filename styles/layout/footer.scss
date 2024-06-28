@@ -1,0 +1,43 @@
+.footer {
+    @extend %description-18;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    background-color: transparent;
+    color: $color-bright-gray;
+    margin-top: 6rem;
+    padding: 1rem 0;
+}
+
+.footer__column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 6.4rem auto;
+}
+
+.footer__column:first-child {
+    margin-left: 4rem;
+}
+
+.footer__socials {
+    display: flex;
+   flex-direction: column;
+    list-style-type: none;
+}
+
+.footer__socials li a {
+    color: $color-bright-gray;
+    text-decoration: none;
+}
+
+.footer__link {
+    color: $color-bright-gray;
+    text-decoration: none;
+}
+
+.footer__title {
+    margin-bottom: 0.5rem;
+}

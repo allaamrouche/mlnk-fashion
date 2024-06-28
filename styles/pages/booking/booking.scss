@@ -1,0 +1,148 @@
+.booking__content {
+	display: inline-block;
+    margin-bottom: 8.8rem;
+    white-space: nowrap;
+  }
+  
+.booking__content--title {
+	@extend %title-bold-200;
+
+	text-transform: uppercase;
+    display: inline-block;
+	vertical-align: middle;	
+    &:first-child {
+        margin-left: 4rem; 
+    }
+  }
+
+  .booking__intro {
+		display: block;
+		padding: 0 2.3rem;
+		position: relative;
+	
+  }
+
+
+  .booking__intro--title {
+	@extend %title-bold-200;
+	display: block;
+	text-wrap: nowrap;
+	text-transform: uppercase;
+  }
+
+ 
+.booking__description {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 2rem; 
+	height: 48rem;
+	margin: 10rem auto;
+}
+
+.booking__description__text {
+	@extend %title-bold-48;
+    flex: 2; 
+	align-self: baseline;
+	text-transform: uppercase;
+}
+
+.booking__description__explore {
+	display: flex;
+	flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    font-size: 4.4rem;
+}
+
+.booking__about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+	height: 104rem;
+	position: relative;
+	margin: 10rem auto 0;	
+}
+
+.booking__about__label {
+    font-size: 2.4rem;
+	text-transform: uppercase;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    flex-basis: 20%;
+    white-space: nowrap; 
+    position: relative; 
+	align-self: baseline;
+   
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0; 
+        bottom: -10px; 
+        height: 0.5px;
+        width: 100%; 
+        background-color: $color-bright-gray; 
+    }
+}
+
+.booking__about__content {
+    display: flex;
+    align-self: baseline;
+    flex-basis: 60%;
+}
+
+.booking__about__text {
+	@extend %title-bold-48;
+	text-transform: uppercase;
+}
+
+
+
+
+.booking__featured {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.booking__featured__text {
+	@extend %title-bold-48;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	text-transform: uppercase;
+  
+}
+
+.booking__featured__apartments {
+    display: flex;
+    justify-content: space-around;
+	margin: 20rem auto;	
+    width: 100%;
+}
+
+.booking__featured__apartment {
+   width: 48rem;
+   height: 36rem;
+   position: relative;
+}
+
+.booking__featured__image {
+	width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.booking__featured__location,
+.booking__featured__price {
+    margin: 5px 0;
+}
+
+.booking__slider {
+  overflow: hidden;
+}
+
+
+  
