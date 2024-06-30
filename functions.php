@@ -187,39 +187,3 @@ function custom_woocommerce_catalog_ordering() {
     echo '</form>';
 }
 
-// function custom_woocommerce_catalog_ordering() {
-//     // Only display the custom dropdown if products will be displayed
-//     if (!woocommerce_products_will_display())
-//         return;
-
-//     echo '<div class="custom-dropdown">
-//             <div class="custom-dropdown__selected">Select an Option</div>
-//             <ul class="custom-dropdown__list">
-//                 <li data-value="menu_order">Default Sorting</li>
-//                 <li data-value="popularity">Sort by Popularity</li>
-//                 <li data-value="rating">Sort by Average Rating</li>
-//                 <li data-value="date">Sort by Latest</li>
-//                 <li data-value="price">Sort by Price: Low to High</li>
-//                 <li data-value="price-desc">Sort by Price: High to Low</li>
-//             </ul>
-//           </div>';
-//     echo '<select name="orderby" class="orderby dropdown__select" aria-label="Shop order" style="display:none;">';
-//     // Get the current selected value
-//     $current_orderby = isset($_GET['orderby']) ? $_GET['orderby'] : 'menu_order';
-//     $options = array(
-//         'menu_order' => 'Default sorting',
-//         'popularity' => 'Sort by popularity',
-//         'rating' => 'Sort by average rating',
-//         'date' => 'Sort by latest',
-//         'price' => 'Sort by price: low to high',
-//         'price-desc' => 'Sort by price: high to low'
-//     );
-
-//     foreach ($options as $value => $label) {
-//         echo sprintf('<option value="%s"%s>%s</option>', $value, selected($current_orderby, $value, false), $label);
-//     }
-
-//     echo '</select>';
-//     // Include any additional query string parameters to preserve when the form is submitted
-//     wc_query_string_form_fields(null, array('orderby', 'submit', 'paged', 'product-page'));
-// }

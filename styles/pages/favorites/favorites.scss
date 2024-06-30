@@ -50,6 +50,10 @@
   justify-content: space-between;
 }
 
+.favorites-icon {
+  margin-top: 1rem;
+}
+
 /* Medium screens (tablets): 3 products per row */
 @media (max-width: 1024px) {
   .favorites__product {

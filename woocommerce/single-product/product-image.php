@@ -16,7 +16,7 @@ if ($post_thumbnail_id) {
 if ($attachment_ids && !empty($attachment_ids)) {
     $counter = 0;
     foreach ($attachment_ids as $attachment_id) {
-        if ($counter >= 4)
+        if ($counter >= 3)
             break;
         $image_url = wp_get_attachment_url($attachment_id);
         $thumbnails_html .= '<div class="element__reveal product-single--thumbnails woocommerce-product-gallery__image" data-animation="reveal">

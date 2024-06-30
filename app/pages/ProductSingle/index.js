@@ -18,22 +18,85 @@ export default class ProductSingle extends Page {
         });
     }
 
+
     create() {
         super.create();
-      
+        this.setupThumbnails();
         this.addThumbnailClickHandlers();
         this.addTabToggleHandlers(); 
         this.addAttributeOptionHandlers();
     }
 
+    setupThumbnails() {
+        const mainImageContainer = this.elements.mainImage[0];
+        const mainImageUrl = mainImageContainer.style.backgroundImage;
+        const thumbnailContainer = document.querySelector('.product-single--thumbnails');
+
+        // Clear existing thumbnails
+        while (thumbnailContainer.firstChild) {
+            thumbnailContainer.removeChild(thumbnailContainer.firstChild);
+        }
+
+        // Add the main product image as a thumbnail only if additional thumbnails are provided
+        if (this.elements.thumbnails.length > 0) {
+            this.addThumbnail(mainImageUrl, thumbnailContainer); // Add main image as first thumbnail
+
+            // Append all other provided thumbnails
+            this.elements.thumbnails.forEach(thumbnail => {
+                thumbnailContainer.appendChild(thumbnail);
+            });
+        }
+    }
+
+    addThumbnail(imageUrl, container) {
+        console.log('imageUrl', imageUrl);  // Debug to see what imageUrl is actually received
+        
+        // Create the outermost container for the thumbnail
+        const thumbnail = document.createElement('div');
+        thumbnail.className = 'element__reveal product-single--thumbnails woocommerce-product-gallery__image';
+        thumbnail.setAttribute('data-animation', 'reveal');
+    
+        // Create the inner container that will directly contain the image
+        const innerDiv = document.createElement('div');
+        innerDiv.className = 'element__reveal__inner';
+    
+        // Create the innermost div that will actually contain the background image
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'element__reveal__img product-single--thumbnails-image';
+        
+        // Since imageUrl is already in the correct format, assign it directly
+        imgDiv.style.backgroundImage = imageUrl;
+    
+        // Assemble the thumbnail structure
+        innerDiv.appendChild(imgDiv);
+        thumbnail.appendChild(innerDiv);
+        container.appendChild(thumbnail);
+    }
+    
+    
+   
+    
+
+    // addThumbnail(imageUrl, container) {
+    //     const thumbnail = document.createElement('div');
+    //     thumbnail.className = 'woocommerce-product-gallery__image';
+    //     const imgDiv = document.createElement('div');
+    //     imgDiv.className = 'product-single--thumbnails-image';
+    //     imgDiv.style.backgroundImage = imageUrl;
+    //     imgDiv.style.backgroundSize = 'cover'; // Ensure image fits well within the thumbnail
+    //     thumbnail.appendChild(imgDiv);
+    //     container.appendChild(thumbnail);
+    // }
+
     addThumbnailClickHandlers() {
-        this.elements.thumbnails.forEach(thumbnail => {
+        const allThumbnails = document.querySelectorAll('.product-single--thumbnails .woocommerce-product-gallery__image');
+        allThumbnails.forEach(thumbnail => {
             thumbnail.addEventListener('click', (event) => {
                 const imgDiv = thumbnail.querySelector('.product-single--thumbnails-image');
                 if (imgDiv) {
                     const newImageUrl = imgDiv.style.backgroundImage;
-                    if (newImageUrl && this.elements.mainImage && this.elements.mainImage.length > 0) {
-                        const mainImageContainer = this.elements.mainImage[0];
+                    const mainImageContainer = this.elements.mainImage[0];
+                    if (newImageUrl && mainImageContainer) {
                         gsap.set(mainImageContainer, {
                             backgroundImage: newImageUrl,
                             backgroundSize: '70%'
@@ -48,7 +111,7 @@ export default class ProductSingle extends Page {
                             }
                         });
                     } else {
-                        console.error('Error: New image URL is undefined, or main image element not found or has no elements.');
+                        console.error('Error: New image URL is undefined, or main image element not found.');
                     }
                 } else {
                     console.error('Error: Thumbnail image div not found.');

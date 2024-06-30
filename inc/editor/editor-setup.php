@@ -15,7 +15,7 @@ function malanka_enqueue_editor_scripts() {
 }
 
 add_action('enqueue_block_editor_assets', 'malanka_enqueue_editor_scripts');
-add_action('admin_enqueue_scripts', 'malanka_enqueue_admin_scripts');
+add_action('admin_enqueue_scripts', 'malanka_enqueue_editor_scripts');
 
 
 

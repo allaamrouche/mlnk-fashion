@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<div id="content" class="content" data-template="main">
+<!-- <div id="content" class="content" data-template="main">
     <div class="main" data-background="#edeee9" data-color="#111">
-      <div class="main__wrapper">
+      <div class="main__wrapper"> -->
 
  
         

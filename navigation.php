@@ -7,7 +7,7 @@ if (has_nav_menu('header-menu')) {
     if (has_custom_logo()) {
         $logo_html = '<a class="navigation__logo__link" href="' . esc_url(home_url('/')) . '"><img src="' . esc_url($logo[0]) . '" alt="' . esc_attr(get_bloginfo('name')) . ' logo"></a>';
     } else {
-        $logo_html = '<a class="navigation__logo__link" href="' . esc_url(home_url('/')) . '">' . esc_html(get_bloginfo('name')) . '</a>';
+        $logo_html = '<a class="navigation__logo__link" href="' . esc_url(home_url('/')) . '">' . 'Malanka' . '</a>';
     }
 
     wp_nav_menu(array(

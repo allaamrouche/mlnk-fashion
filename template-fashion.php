@@ -24,7 +24,9 @@ get_header();
 
         </h4>
         <button class="fashion__slider__content__button">
-            shop now 
+        <a href="<?php echo get_permalink(wc_get_page_id('shop')); ?>">
+        Shop Now
+    </a>
         </button>
     </div>
 </section>
@@ -131,22 +133,22 @@ get_header();
 
         <div class="hover__gallery__wrapper" data-cursor-text="shop now">
 		    <div class="hover__gallery">
-                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn12.jpeg'); ?>">
+                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn21.jpeg'); ?>">
                     <span class="hover__gallery__item--text" data-splitting>Dresses</span>
                 </a>
-                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn21.jpeg'); ?>"> 
+                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn13.jpeg'); ?>"> 
                     <span class="hover__gallery__item--text" data-splitting>Accessories</span>
                 </a>
-                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn8.jpeg'); ?>">
+                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn17.jpeg'); ?>">
                     <span class="hover__gallery__item--text" data-splitting>Pants</span>
                 </a>
-                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn32.jpeg'); ?>">
+                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn8.jpeg'); ?>">
                     <span class="hover__gallery__item--text" data-splitting>Swimwear</span>
                 </a>
-                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn33.jpeg'); ?>">
+                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn22.jpeg'); ?>">
                     <span class="hover__gallery__item--text" data-splitting>Tops</span>
                 </a>
-                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn14.jpeg'); ?>">
+                <a class="hover__gallery__item" data-img="<?php echo esc_url(get_template_directory_uri() . '/images/fshn-34.jpg'); ?>">
                     <span class="hover__gallery__item--text" data-splitting>Blazers</span>
                 </a>
             </div>
@@ -158,8 +160,9 @@ get_header();
     <h1 class="fashion__products--heading" data-animation="title">Mediterranean Essence</h1>
     <div class="fashion__products--paragraph">
     <span class="fashion__products--indented" data-animation="title">Introducing the Capsule Collection,</span>
-    <span class="fashion__products--indented" data-animation="title">an exclusive selection that embody the timeless allure of the Mediterranean coast.</span>
-   <p data-animation="title">  This collection is meticulously crafted to blend classic styles with modern functionality,
+    <span class="fashion__products--indented" data-animation="title">an exclusive selection that embody </span>
+    <span class="fashion__products--indented" data-animation="title">the timeless allure of the Mediterranean coast.</span>
+    <p data-animation="title">  This collection is meticulously crafted to blend classic styles with modern functionality,
     perfect for the discerning traveler who appreciates elegance and simplicity
     </p>
 </div>
@@ -173,7 +176,7 @@ get_header();
 				<div class="double-slider__item"><div class="double-slider__item-inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/fshn-slider.jpg');"></div></div>
 				<div class="double-slider__item"><div class="double-slider__item-inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/fshn2.jpeg');"></div></div>
 				<div class="double-slider__item"><div class="double-slider__item-inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/fshn4.jpeg');"></div></div>
-                <div class="double-slider__item"><div class="double-slider__item-inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/fshn2.jpeg');"></div></div>
+               
 				
 			</div>
 			<div class="double-slider double-slider--fg">
@@ -188,9 +191,6 @@ get_header();
 				</div>
 				<div class="double-slider__item">
 					<div class="double-slider__item-inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/fshn4.jpeg');"></div>
-				</div>
-                <div class="double-slider__item">
-					<div class="double-slider__item-inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/fshn2.jpeg');"></div>
 				</div>
 				
 			</div>

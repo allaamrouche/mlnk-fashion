@@ -9,12 +9,12 @@ import 'splitting/dist/splitting-cells.css';
 // initialize Splitting
 const splitting = Splitting();
 
-import mlnk from '../../../images/fshn12.jpeg';
-import mlnk6 from '../../../images/fshn21.jpeg';
-import mlnk7 from '../../../images/fshn8.jpeg';
-import mlnk8 from '../../../images/fshn32.jpeg';
-import mlnk9 from '../../../images/fshn33.jpeg';
-import mlnk11 from '../../../images/fshn14.jpeg';
+import mlnk from '../../../images/fshn21.jpeg';
+import mlnk6 from '../../../images/fshn13.jpeg';
+import mlnk7 from '../../../images/fshn17.jpeg';
+import mlnk8 from '../../../images/fshn8.jpeg';
+import mlnk9 from '../../../images/fshn22.jpeg';
+import mlnk11 from '../../../images/fshn-34.jpg';
 
 const images = [
   mlnk,
